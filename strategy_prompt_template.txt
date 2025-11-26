@@ -1,0 +1,87 @@
+I am going to give you instructions divided into sections. Each section is titled with a ###SECTION_NAME### and refers to an important aspect of the prompt that you must consider when you elaborate your answer.
+
+###OPTIMIZATION_ENGINE_PARAMETERS###
+These are the input parameters of an optimization engine that solves a manufacturing system problem, including the initial values and the meanings of the parameters.
+Each entry in the list below must be interpreted according to the following schema:
+"# VARIABLE_SCOPE | DESCRIPTION | VARIABLE_TYPE | VARIABLE_RANGE, CONSTRAINTS or GUIDELINES #" (this provides further explanation about the variable)
+VARIABLE_NAME = VARIABLE_VALUE (this represents the variable setting)
+
+<json>
+{
+    "value": "model_python",
+    "options": {
+        "model_python": {
+            "type": "file",
+            "value": "${SESSION_DIRECTORY}/fc_model_specification.csv",
+            "format": "python_model"
+        }
+    }
+}
+</json>
+
+###STRATEGY_OPTIONS###
+<json>
+{
+    "value": "strategy_options",
+    "options": {
+        "strategy_options": {
+            "type": "file",
+            "value": "knowledge_base/strategy_options.json",
+            "format": "json"
+        }
+    }
+}
+</json>
+
+###SCENARIO###
+<json>
+{
+    "value": "input",
+    "options": {
+        "input": {
+            "type": "file",
+            "value": "${SESSION_DIRECTORY}/scenario.txt"
+        }
+    }
+}
+</json>
+
+###YOUR_TASK###
+If you are given enough information, you must suggest one or more strategies suitable to achieve the directives reported in the ###EVENT### and ###OBJECTIVE### sections, or point out any insufficiencies or contradictions in the input information required for doing so.
+
+Firstly, you have to select an option, based on its description and the information provided in the ###SCENARIO### section, for each block defined inside the ###STRATEGY_OPTIONS### section. The available options are listed under the "options" field along with their description. When selecting an option, make sure to include all fields listed under that option.
+Secondly, if the chosen strategy option contains a variable indicated by ${...}, you have to define its value (in case of indexes make sure to count from 0), that comply with the instructions contained in the ###SCENARIO### section.
+Remember, a valid strategy is a combination of blocks contained in the ###STRATEGY_OPTIONS### section, only. You must choose only one option from each block in the ###STRATEGY_OPTIONS###.
+
+If something cannot be determined based solely on the given information, do not make assumptions to continue the thought process.
+
+###TASK_OUTPUT_FORMAT###
+You must provide the requested strategies in JSON format, with the same structure as in the ###STRATEGY_OPTIONS### section:
+```json
+{
+    "<strategy_component>": {
+        "description": "<component_description>"
+        "options": {
+            "<option_letter>": {
+                "description": "<option_description>"
+                "parameter_values": "<parameter_values>"
+            }
+        }
+    },
+    ...
+}
+```
+
+###TASK_OUTPUT_EXPLANATION###
+It contains a step-by-step explanation/summarization of your response. If something cannot be determined based solely on the given information, do not make assumptions to continue the thought process.
+
+###TASK_INSUFFICIENT_INFO###
+Verify whether the reasoning performed in ###TASK_OUTPUT_EXPLANATION### is logically based on the given information. If any assumptions have been made using information not provided, explain what additional information is needed.
+
+###TASK_OUTPUT###
+Here you have to produce the answer to ###YOUR_TASK###, considering ALL the directives included in the previous sections, and structured according to the ###TASK_OUTPUT_FORMAT###.
+
+Your final output must be structured as follows (in this order):
+###TASK_OUTPUT###
+###TASK_OUTPUT_EXPLANATION###
+###TASK_INSUFFICIENT_INFO###
