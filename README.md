@@ -1,4 +1,4 @@
-# genai4fc
+# LLM Prompting Framework for Supporting Optimal Production System Configuration
 
 
 # License
