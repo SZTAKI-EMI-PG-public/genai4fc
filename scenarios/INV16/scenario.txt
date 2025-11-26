@@ -1,0 +1,1 @@
+Modify the maintenance cost robots to 200000 yen per period. Re-plan the configuration from scratch.

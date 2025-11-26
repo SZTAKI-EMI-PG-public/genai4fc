@@ -1,0 +1,1 @@
+Modify the investment cost of the first robot to 4 million yens. Re-plan the configuration from scratch.

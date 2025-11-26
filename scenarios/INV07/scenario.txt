@@ -1,0 +1,1 @@
+Modify the production system configuration to achieve a production volume of 30 units per 3600 seconds. Re-plan the configuration from scratch.

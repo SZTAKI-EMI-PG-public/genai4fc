@@ -1,0 +1,1 @@
+Show how the line can work when the human worker at Station 1 is absent. For this purpose, remove the human worker of Station 1 from the configuration, allow the solver to modify the assignment of tools and storages, but prohibit any changes to stations, robots and human workers. Minimize the cycle time subject to the above constraints.

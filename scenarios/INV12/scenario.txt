@@ -1,0 +1,1 @@
+Update the process plans to reflect that task durations corresponding to the first mode is decreased by 1.0 second for each task. Re-plan the configuration from scratch.

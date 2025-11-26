@@ -1,0 +1,1 @@
+Modify the process plans to reflect that the fourth task requires storage number 2 in each of the executed modes.  Re-plan the configuration from scratch.

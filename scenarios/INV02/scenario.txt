@@ -1,0 +1,1 @@
+Increase the cycle time limit by 20%. Depart from the current configuration, making almost any kind of changes. The only exception is that the number of human workers cannot be modified.

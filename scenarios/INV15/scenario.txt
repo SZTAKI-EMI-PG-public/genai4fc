@@ -1,0 +1,1 @@
+Decrease the investment cost of every robot by 20%. Re-plan the configuration from scratch.

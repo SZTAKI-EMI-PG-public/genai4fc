@@ -1,0 +1,1 @@
+Decrease the cycle time limit by 20%. Depart from the current configuration. Do not allow any changes to the stations, but make any other kind of changes if needed.

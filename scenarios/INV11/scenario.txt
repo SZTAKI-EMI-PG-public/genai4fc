@@ -1,0 +1,1 @@
+Re-optimize the production system configuration to reflect that task 7 no longer requires the use of a storage in any of its execution modes. Update the process plan accordingly and re-plan the configuration from scratch.
