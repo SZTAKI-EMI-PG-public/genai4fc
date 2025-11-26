@@ -1,0 +1,159 @@
+{
+    "optimization_criterion": {
+        "description": "Selection of the optimization criterion.",
+        "options": {
+            "c": {
+                "description": "Minimize makespan subject to the given constraints on what changes can be made to the line.",
+                "parameter_values": {
+                    "MinimizeCost": false,
+                    "MinimizeMakespan": true
+                }
+            }
+        }
+    },
+    "cycle_time": {
+        "description": "Definition of the cycle time limit (note that production volume is inversely proportional to cycle time).",
+        "options": {
+            "a": {
+                "description": "Do not change this parameters compared to the reference value, as the scenario does not require any modification to the cycle time limit."
+            }
+        }
+    },
+    "init_configuration": {
+        "description": "Definition of the initial configuration.",
+        "options": {
+            "c": {
+                "description": "Update the initial configuration by removing resource ${resource_index} from cell ${cell_index} in the ${parameter_name} array, as this resource is unavailable due to failure or absence. This requires changing the appropriate element of a matrix (one of InitBuilt, InitTool, InitStorage, InitRobot, InitHuman denoted by ${parameter_name}) from 1 to 0. All other resources remain available.",
+                "parameter_values": {
+                    "parameter_name": "InitHuman",
+                    "resource_index": 0,
+                    "cell_index": 1
+                }
+            }
+        }
+    },
+    "modification_of_stations": {
+        "description": "Determine whether stations can be modified compared to the initial configuration or not.",
+        "options": {
+            "b": {
+                "description": "Prohibit any modification to the stations, as such a change would cause excessive downtime and disrupt production.",
+                "parameter_values": {
+                    "FixedStations": true,
+                    "FixedNumStations": true
+                }
+            }
+        }
+    },
+    "modification_of_robots": {
+        "description": "Determine whether robots can be modified compared to the initial configuration or not.",
+        "options": {
+            "b": {
+                "description": "Prohibit any modification to the robots, as such a change would cause excessive downtime and disrupt production.",
+                "parameter_values": {
+                    "FixedRobot": true,
+                    "FixedNumRobot": true
+                }
+            }
+        }
+    },
+    "modification_of_tools": {
+        "description": "Determine whether tools can be modified compared to the initial configuration or not.",
+        "options": {
+            "c": {
+                "description": "Allow the optimization engine to modify tools arbitrarily, as these minor adjustments can be promptly applied.",
+                "parameter_values": {
+                    "FixedTool": false,
+                    "FixedNumTool": false
+                }
+            }
+        }
+    },
+    "modification_of_storages": {
+        "description": "Determine whether storages can be modified compared to the initial configuration or not.",
+        "options": {
+            "c": {
+                "description": "Allow the optimization engine to modify storages arbitrarily, as these minor adjustments can be promptly applied.",
+                "parameter_values": {
+                    "FixedStorage": false,
+                    "FixedNumStorage": false
+                }
+            }
+        }
+    },
+    "modification_of_humans": {
+        "description": "Determine whether the allocation of human workers can be modified compared to the initial configuration or not.",
+        "options": {
+            "b": {
+                "description": "Prohibit any modification to the allocation of human workers.",
+                "parameter_values": {
+                    "FixedHuman": true,
+                    "FixedNumHuman": true
+                }
+            }
+        }
+    },
+    "modification_of_tasks": {
+        "description": "Definition of tasks in the process plan.",
+        "options": {
+            "a": {
+                "description": "Do not change these parameters compared to the reference value, as the scenario does not require any modification to products or the process plans."
+            }
+        }
+    },
+    "modification_of_cost_human": {
+        "description": "Definition of the labor cost of human workers.",
+        "options": {
+            "a": {
+                "description": "Do not change this parameter compared to the reference value, as the scenario does not require any modification to this parameter."
+            }
+        }
+    },
+    "modification_of_cost_invest_base_cell": {
+        "description": "Definition of the investment cost for building an empty base cell.",
+        "options": {
+            "a": {
+                "description": "Do not change this parameter compared to the reference value, as the scenario does not require any modification to this parameter."
+            }
+        }
+    },
+    "modification_of_cost_invest_tool": {
+        "description": "Definition of the investment cost for tools.",
+        "options": {
+            "a": {
+                "description": "Do not change these parameters compared to the reference value, as the scenario does not require any modification to these parameters."
+            }
+        }
+    },
+    "modification_of_cost_invest_robot": {
+        "description": "Definition of the investment cost for robots.",
+        "options": {
+            "a": {
+                "description": "Do not change these parameters compared to the reference value, as the scenario does not require any modification to these parameters."
+            }
+        }
+    },
+    "modification_of_cost_invest_storage": {
+        "description": "Definition of the investment cost for storages.",
+        "options": {
+            "a": {
+                "description": "Do not change these parameters compared to the reference value, as the scenario does not require any modification to these parameters."
+            }
+        }
+    },
+    "modification_of_cost_maintain_cell": {
+        "description": "Definition of the maintenance cost for each station per period.",
+        "options": {
+            "a": {
+                "description": "Do not change this parameter compared to the reference value, as the scenario does not require any modification to this parameter."
+            }
+        }
+    },
+    "modification_of_cost_maintain_robot": {
+        "description": "Definition of the maintenance cost for each robot per period.",
+        "options": {
+            "a": {
+                "description": "Do not change this parameter compared to the reference value, as the scenario does not require any modification to this parameter."
+            }
+        }
+    }
+}

@@ -1,0 +1,1 @@
+Update the process plan to indicate that the second task must be executed by a human worker. Execution modes that require a robot are not applicable for this task. Re-plan the configuration from scratch.

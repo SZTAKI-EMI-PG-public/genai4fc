@@ -1,0 +1,1 @@
+Optimize the production system configuration for a modified product whose tasks with OperationID 1-3 are outsourced, and therefore, they are deleted from the process plan. Plan a new line from scratch.

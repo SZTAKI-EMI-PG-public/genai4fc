@@ -1,0 +1,1 @@
+Show how the line can work when the robot at Station 2 is broken down. For this purpose, remove the robot of Station 2 from the configuration, allow the solver to modify the assignment of human workers, tools and storages, but prohibit any changes to the stations and robots. Minimize the cycle time subject to the above constraints.
